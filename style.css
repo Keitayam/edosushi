@@ -1,9 +1,25 @@
+body {
+  font-family: 'Noto Serif JP', serif;
+  line-height: 1.5;
+}
+
 header {
-  background-color: #fff;
+  width: 100%;
+  height: 130px;
 }
 
 .inner {
   margin: 0 auto;
   max-width: 1040px;
   width: 100%;
+}
+
+.header-inner {
+  display: flex;
+  background-color: #fff;
+}
+
+.header-center {
+  display: flex;
+  flex-direction: column;
 }
