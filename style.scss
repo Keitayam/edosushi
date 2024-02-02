@@ -4,6 +4,18 @@ body{
     color: #151515;
 }
 
+h2{
+    font-size: 40px;
+}
+
+h3{
+    font-size: 25px;
+}
+
+h4{
+    font-size: 18px;
+}
+
 header{
     width: 100%;
     height: 130px;
@@ -14,7 +26,7 @@ header{
 
 .inner{
     margin: 0 auto;
-    max-width: 1040px;
+    max-width: 1140px;
     width: 100%;
 }
 
@@ -108,4 +120,149 @@ header{
     letter-spacing: 0.05em
 }
 
-.
+//fv
+
+.top_fv{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.fv_slide{
+    width: 100%;
+    height: 480px; 
+}
+
+.fv_slide_image{
+    width: 100%;
+    height: 480px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: slider-1 32s linear infinite;
+
+    &:nth-child(1){
+        background-image: url(../images/top_fv1.jpg);
+        animation-delay: -2s;
+    }
+
+    &:nth-child(2){
+        background-image: url(../images/top_fv2.jpg);
+        animation-delay: 6s;
+    }
+
+    &:nth-child(3){
+        background-image: url(../images/top_fv3.jpg);
+        animation-delay: 14s;
+    }
+
+    &:nth-child(4){
+        background-image: url(../images/top_fv4.jpg);
+        animation-delay: 22s;
+    }
+}
+
+@keyframes slider-1 {
+    /* 非表示状態からフェードインを開始する */
+    0% {
+        opacity: 0;
+    }
+    /* フェードインを完了し完全表示する */
+    4.16% {
+        opacity: 1;
+    }
+    /* ここまで完全表示を維持したらフェードアウトを開始する */
+    33.33% {
+        opacity: 1;
+    }
+    /* フェードアウトを完了し非表示にする */
+    41.66% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.reserve_circle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #151515;
+    position: absolute;
+    right: calc(100px / 1440px * 100%);
+    bottom: 40px;
+    z-index: 1;
+}
+
+.reserve_btn h4{
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.reserve_btn p{
+    color: #AF8F26;
+    margin-bottom: 10px;
+}
+
+
+//top_about
+
+.top_about{
+    padding-top: 81px;
+}
+
+.top_about_text{
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 312px;
+}
+
+.top_about_text h2,
+.top_about_text h4,
+.top_about_text p{
+    writing-mode: vertical-rl;
+}
+
+.top_about_text h4{
+    font-weight: 700;
+    color: #AF8F26;
+}
+
+.top_about_text p{
+    font-weight: 600;
+}
+
+.top_menu_card{
+    display: flex;
+    gap:125px;
+}
+
+.top_menu_image{
+    width: calc(700px / 1140px * 100%);
+}
+
+.top_menu_image img{
+    width: 100%;
+}
+
+.top_menu_box{
+    width: calc(340px / 1140px * 100%);
+}
+
+.top_menu_subimage img{
+    width: 310px;
+    height: 310px;
+}
+
+
