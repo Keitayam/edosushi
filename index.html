@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Noto+Serif+JP:wght@200;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Noto+Serif+JP:wght@200;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="icon" type="image/ico" href="image/favicon.ico">
     <link rel="apple-touch-icon" href="image/apple-touch-icon.png" sizes="180x180">
@@ -54,10 +54,13 @@
                         <p class="tel_box_text">お電話でのご予約はこちら</p>
                         <p class="tel_box_number"><span>Tel: </span>052-211-7521</p>
                     </div>
-                    <div class="common_cart_box">
-                        <img class="cart_icon" src="images/cart.png" alt="">
+                    <a class="common_cart_box" href="">
+                        <figure class="cart_icon">
+                            <img src="images/cart.png" alt="カート">
+                            <img src="images/cart_hover.png" alt="カートホバー">
+                        </figure>
                         <p class="cart_text">CART</p>
-                    </div>
+                    </a>
                 </div>
                 <nav class="header_nav">
                     <ul class="header_lists">
@@ -84,14 +87,14 @@
             <div class="fv_slide">
                 <figure class="fv_slide_image"><img src="images/top_fv1.jpg" alt=""></figure>
                 <figure class="fv_slide_image"><img src="images/top_fv2.jpg" alt=""></figure>
-                <figure class="fv_slide_image"><img src="images/top_fv3.jpg" alt=""></figure>
+                <figure class="fv_slide_image"><img src="images/menu_drink2.jpg" alt=""></figure>
                 <figure class="fv_slide_image"><img src="images/top_fv4.jpg" alt=""></figure>
             </div>  
-        <div class="reserve_circle reserve_btn">
+        <a class="reserve_circle reserve_btn" href="">
             <h4>予約する</h4>
             <p>RESERVATION</p>
             <figure><img src="images/allow_right.png" alt="reserve"></figure>
-        </div>
+        </a>
     </section>
     <!-- /.top_fv -->
 
@@ -125,7 +128,7 @@
         <div class="inner">
             <div class="top_menu_card">
                 <figure class="top_menu_image">
-                    <img src="images/top_menu1.jpg" alt="コースのお料理">
+                    <img src="images/menu_sushi3.jpg" alt="コースのお料理">
                 </figure>
                 <div class="top_menu_box">
                     <h2 class="top_menu_title">コースの<br>お料理</h2>
@@ -286,9 +289,9 @@
                 </div>
             </div>
             <div class="top_news_posts">
-                <a class="top_news_post">
+                <a class="top_news_post" href="">
                     <figure class="top_news_post_img">
-                        <img src="images/top_news_img1.jpg" alt="お知らせ">
+                        <img src="images/menu_sushi6.jpg" alt="お知らせ">
                     </figure>
                     <div class="top_news_post_body">
                         <time class="post_time">2023.12.15</time>
@@ -298,9 +301,9 @@
                     <figure><img src="images/allow_right.png" alt="ニュース詳細"></figure>
                 </a>
 
-                <a class="top_news_post">
+                <a class="top_news_post" href="">
                     <figure class="top_news_post_img">
-                        <img src="images/top_news_img2.jpg" alt="お知らせ">
+                        <img src="images/menu_drink1.jpg" alt="お知らせ">
                     </figure>
                     <div class="top_news_post_body">
                         <time class="post_time">2023.12.15</time>
@@ -310,7 +313,7 @@
                     <figure><img src="images/allow_right.png" alt="ニュース詳細"></figure>
                 </a>
 
-                <a class="top_news_post">
+                <a class="top_news_post" href="">
                     <figure class="top_news_post_img">
                         <img src="images/top_news_img3.jpg" alt="お知らせ">
                     </figure>
@@ -421,7 +424,10 @@
                 <div class="footer_btn">
                     <a href="" class="common_online_store">ONLINE STORE<figure><img src="images/allow_right_white.png" alt="オンラインストア"></figure></a>
                     <div class="footer_cart_box common_cart_box">
-                        <img class="cart_icon" src="images/cart.png" alt="カート">
+                        <figure class="cart_icon">
+                            <img src="images/cart.png" alt="カート">
+                            <img src="images/cart_hover.png" alt="カートホバー">
+                        </figure>
                         <p class="cart_text">CART</p>
                     </div>
                     <p>&copy;2024 江戸鮨處　太いち</p>
