@@ -376,7 +376,8 @@ header{
 }
 
 .section_title h2{
-   display: inline-block;
+    font-size: 40px;
+    display: inline-block;
 }
 
 .section_title h2::after{
@@ -870,10 +871,10 @@ header{
 
 .page_about{
     padding-top: 90px;
+    position: relative;
 }
 
 .about_heading{
-    position: relative;
     padding-bottom: 199px;
 }
 
@@ -967,13 +968,13 @@ header{
     margin: 0 auto;
 }
 
-.about_info_lists{
+.common_lists{
     background-color: rgba(255, 255, 255, 0.6);
     padding: 30px;
     position: relative;
 }
 
-.about_info_lists::before{
+.common_lists::before{
     content: "";
     width: 100%;
     height: 100%;
@@ -984,20 +985,23 @@ header{
     z-index: -1;
 }
 
-.about_info_list {
+.common_list {
     width: 100%;
     display: flex;
     border-bottom: 1px solid #DEDEDE;
 }
 
-.about_info_list:last-child{
+.common_list:last-child{
     border-bottom: none;
 }
 
-.about_info_term {
+.common_term{
     width: calc(247px / 1080px *100%);
     font-weight: 600;
     border-right: 1px solid #DEDEDE;
+}
+
+.about_info_term {
     padding: 20px 20px;
 }
   
@@ -1245,6 +1249,208 @@ header{
     background-color: #FAF8F0;
     border: 1px solid #AF8F26;
     padding: 22px 176px;
+}
+
+//company
+
+.page_company{
+    padding-top: 101px;
+    padding-bottom: 184px;
+}
+
+.company_heading{
+    margin-bottom: 150px;
+}
+
+.company_inner{
+    display: flex;
+    align-items: center;
+    gap: 7.15%;
+}
+
+.company_heading_img{
+    width: 680px;
+    height: 480px;
+}
+
+.company_heading_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.company_heading_text{
+    width: calc(507px / 1140px *100%);
+    padding-right: 10.41%;
+}
+
+.company_heading_text .company_section_title{
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.company_section_title{
+    margin-bottom: 30px;
+}
+
+.company_section_title h2::after{
+    margin: 10px auto 0;
+}
+
+.company_heading_text p{
+    letter-spacing: 0.03em;
+    line-height: 2.1875;
+    margin-top: 50px;
+}
+
+.company_info,
+.company_access{
+    margin-bottom: 140px;
+}
+
+.company_info_term{
+    font-size: 18px;
+    padding: 23px 20px;
+}
+
+.company_info_description{
+    font-weight: 500;
+    padding: 23px 20px 23px 78px;
+}
+
+.company_history_list{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    border-top: 1px solid transparent;
+    position: relative;
+}
+
+.company_history_list::before,
+.company_history_list::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+}
+
+.company_history_list::before{
+    width: calc(250px / 1140px *100%);
+    border-top: 1px solid #AF8F26;
+}
+
+.company_history_list::after{
+    width: calc(850px / 1140px *100%);
+    border-top: 1px solid #DEDEDE;
+    right: 0;
+}
+
+.company_history_year{
+    width: calc(250px / 1140px *100%);
+    font-size: 40px;
+    color: #AF8F26;
+    padding: 13px 0 43px;
+}
+
+.company_history_text{
+    width: calc(850px / 1140px *100%);
+    letter-spacing: 0.03em;
+    padding: 29px 0 59px;
+}
+
+.company_history_list:last-child .company_history_year,
+.company_history_list:last-child .company_history_text{
+    padding-bottom: 0;
+}
+
+//recruit
+
+.page_recruit{
+    padding-top: 100px; 
+    padding-bottom: 140px;
+}
+
+.recruit_section_title{
+    margin-bottom: 30px;
+}
+
+.recruit_info_term,
+.recruit_info_description{
+    padding: 20px;
+}
+
+//guide
+
+.page_guide{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.page_guide .guide table{
+    margin: 0 auto;
+}
+
+.page_guide .guide tr{
+    border: 1px solid #DEDEDE;
+}
+
+.page_guide .guide th{
+    width: 25%;
+    padding: 20px;
+    border-right: 1px solid #DEDEDE;
+}
+
+.page_guide .guide td{
+    width: 75%;
+    padding: 20px;
+}
+
+.page_guide .guide .guide_table tr{
+    border: 1px solid #DEDEDE;
+}
+
+.page_guide .guide .guide_table th,
+.page_guide .guide .guide_table td{
+    width: auto;
+    font-size: 12px;
+}
+
+.page_guide .guide .guide_table td:nth-child(2),
+.page_guide .guide .guide_table td:nth-child(3),
+.page_guide .guide .guide_table td:nth-child(4){
+    border-left: 1px solid #DEDEDE;
+}
+
+.credit_brand {
+    width: 300px;
+    margin-top: 10px;
+}
+
+.credit_brand img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+//privacy
+
+.page_privacy{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.privacy h2{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.privacy_text{
+    margin-bottom: 60px;
+}
+
+.privacy_text ul{
+    margin-top: 20px;
 }
 
 
