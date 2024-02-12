@@ -79,16 +79,16 @@
     </header>
     <!-- /.header -->
 
-    <section class="page_fv fv">
+    <section class="fv">
         <div class="fv_bg">
            <div class="page_title"><h2>コースのお料理</h2></div>
         </div>
-        <div class="reserve_circle reserve_btn page_reserve">
-            <h4>予約する</h4>
-            <p>RESERVATION</p>
-            <figure><img src="images/allow_right.png" alt="reserve"></figure>
-        </div>
     </section>
+
+    <a class="reserve_circle reserve_btn" href="">
+        <h4>予約する</h4>
+        <p>RESERVATION</p>
+    </a>
 
     <div class="breadcrumb">
         <a href="">ホーム</a>
@@ -234,13 +234,12 @@
                         <div class="footer_reserve_btn reserve_btn">
                             <h4>予約する</h4>
                             <p>RESERVATION</p>
-                            <figure><img src="images/allow_right.png" alt="reserve"></figure>
                         </div>
                     </div>
                     <div class="footer_access">
                         <div class="footer_access_list">
                             <p class="footer_access_list_title">営業時間</p>
-                            <p> [月~金]<br>
+                            <p class="footer_access_list_text">[月~金]<br>
                                 ランチ:11:30〜14:00 LO14:00<br>
                                 ディナー:17:30〜22:00 LO21:30<br>
                                 [土]<br>
@@ -249,13 +248,13 @@
                         </div>
                         <div class="footer_access_list">
                             <p class="footer_access_list_title">定休日</p>
-                            <p>◇◇ 毎週日曜日<br>
-                                （土曜・祝日は夜のみの営業）
+                            <p class="footer_access_list_text">毎週日曜日<br>
+                                <span class="footer_access_list_holiday">（土曜・祝日は夜のみの営業）</span>
                             </p>
                         </div>
                         <div class="footer_access_list">
                             <p class="footer_access_list_title">住所</p>
-                            <p> 〒460-0002<br>
+                            <p class="footer_access_list_text"><span class="footer_access_list_post_code">〒460-000</span><br>
                                 愛知県名古屋市中区丸の内2丁目15−12<br>
                                 丸の内オークビル1F
                             </p>
@@ -289,13 +288,15 @@
                 </ul>
 
                 <div class="footer_btn">
-                    <a href="" class="common_online_store">ONLINE STORE<figure><img src="images/allow_right_white.png"
-                                alt="オンラインストア"></figure></a>
+                    <a href="">ONLINE STORE</a>
                     <div class="footer_cart_box common_cart_box">
-                        <img class="cart_icon" src="images/cart.png" alt="カート">
+                        <figure class="cart_icon">
+                            <img src="images/cart.png" alt="カート">
+                            <img src="images/cart_hover.png" alt="カートホバー">
+                        </figure>
                         <p class="cart_text">CART</p>
                     </div>
-                    <p>&copy;2024 江戸鮨處　太いち</p>
+                    <p class="footer_copy">&copy;2024 江戸鮨處　太いち</p>
                 </div>
             </div>
 

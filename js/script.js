@@ -1,57 +1,70 @@
-$(function(){
+window.addEventListener('DOMContentLoaded', function () {
 
-    //ハンバーガーメニュー
-    $('.hamburger').click(function(){
-        $(this).toggleClass('is-active');
-        $('#modal').toggleClass('is-active');
-    });
+  var header= document.querySelector('.header');
+  var headerToggle= document.querySelector('.sp_header_toggle');
+  var headerToggleClose = document.querySelectorAll('.js_header_close');
+  var headerNav = document.querySelector('.sp_header_nav');
+  
+   //背景固定
+   function backfaceFixed(fixed) {
+      /**
+       * 表示されているスクロールバーとの差分を計測し、背面固定時はその差分body要素に余白を生成する
+       */
+      const scrollbarWidth = window.innerWidth - document.body.clientWidth;
+      document.body.style.paddingRight = fixed ? `${scrollbarWidth}px` : '';
 
-    //アコーデオンメニュー
+      /**
+       * スクロール位置を取得する要素を出力する(`html`or`body`)
+       */
+      const scrollingElement = () => {
+          const browser = window.navigator.userAgent.toLowerCase();
+          if ('scrollingElement' in document) return document.scrollingElement;
+          if (browser.indexOf('webkit') > 0) return document.body;
+          return document.documentElement;
+      };
 
-    $('.question').click(function(){
-     $(this).toggleClass('is-open');
-     $(this).next().toggleClass('is-show');
-    });
+      /**
+       * 変数にスクロール量を格納
+       */
+      const scrollY = fixed
+          ? scrollingElement().scrollTop
+          : parseInt(document.body.style.top || '0');
 
-    //スクロールトップ
-    $(window).scroll(function(){
-      if($(this).scrollTop()>100 && window.matchMedia("(max-width:768px)").matches){
-        $('#page_top').fadeIn();
-      }else{
-        $('#page_top').fadeOut();
-      }
-    })
+      /**
+       * CSSで背面を固定
+       */
+      const styles = {
+          height: '100vh',
+          left: '0',
+          overflow: 'hidden',
+          position: 'fixed',
+          top: `${scrollY * -1}px`,
+          width: '100vw',
+      };
 
-    $('#page_top').click(function(){
-      $('body,html').animate({scrollTop:0},500);
-    });
-
-    //スクロールヒント
-    window.onload = function(){
-      new ScrollHint('.table');
-    };
-
-    //form紐づけ
-
-    $('#form').submit(function (event) {
-        var formData = $('#form').serialize();
-        $.ajax({
-          url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeBgUcE24K4uADYyfYWMIJgW8Hp74Ed4EKE_iXS-eQBMpB5eg/formResponse",
-          data: formData,
-          type: "POST",
-          dataType: "xml",
-          statusCode: {
-            0: function () {
-             window.location.href = "thanks.html";
-            },
-            200: function () {
-              $(".false-message").slideDown();
-            }
-          }
-        });
-        event.preventDefault();
+      Object.keys(styles).forEach((key) => {
+          document.body.style[key] = fixed ? styles[key] : '';
       });
 
-  
+      /**
+       * 背面固定解除時に元の位置にスクロールする
+       */
+      if (!fixed) window.scrollTo(0, scrollY * -1);
+  };
 
-});
+//ハンバーガーメニューを開いたとき
+  headerToggle.addEventListener('click',function(){
+      headerNav.classList.toggle('is-active');
+      header.classList.toggle('is-active');
+      backfaceFixed(true);
+  })
+//ハンバーガーメニューを閉じたとき
+  headerToggleClose.forEach(element =>{
+      element.addEventListener('click',function(){
+          headerNav.classList.toggle('is-active');
+          header.classList.toggle('is-active');
+          backfaceFixed(false);
+      })
+  })
+
+})
