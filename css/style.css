@@ -139,7 +139,7 @@ body {
 
 .top_header_logo a {
   display: block;
-  width: 11.67vwb;
+  width: 11.67vw;
   height: 100%;
 }
 
@@ -456,10 +456,6 @@ body {
   left: 65%;
 }
 
-.allow_img {
-  height: 11px;
-}
-
 /*top_about*/
 .top_about {
   padding-top: 81px;
@@ -468,7 +464,7 @@ body {
 .top_about_text {
   display: flex;
   flex-direction: row-reverse;
-  padding-right: 27.3684210526%;
+  padding-right: 21.67vmax;
 }
 
 .top_about_text h2,
@@ -478,7 +474,7 @@ body {
 }
 
 .top_about_text h2 {
-  font-size: 40px;
+  font-size: clamp(2rem, 2.78vw, 2.8125rem);
   font-family: "Shippori Mincho B1", serif;
   letter-spacing: 0.19em;
   line-height: 1;
@@ -490,12 +486,12 @@ body {
 }
 
 .top_about_text h4 {
-  font-size: 18px;
+  font-size: clamp(1rem, 1.25vw, 1.125rem);
   font-weight: 700;
   color: #AF8F26;
   letter-spacing: 0.4em;
   line-height: 2;
-  margin: 113px 112px 0 50px;
+  margin: 113px 13.53% 0 6.65%;
   position: relative;
 }
 
@@ -521,6 +517,7 @@ body {
 }
 
 .top_about_text p {
+  font-size: clamp(0.875rem, 1.11vw, 1rem);
   letter-spacing: 0.4em;
   line-height: 2.5;
   margin-top: 116px;
@@ -528,7 +525,7 @@ body {
 
 .top_about_detail {
   margin-top: auto;
-  margin-right: 147px;
+  margin-right: 10.21vmax;
 }
 
 .detail_btn {
@@ -537,7 +534,7 @@ body {
 
 .detail_btn a {
   display: inline-block;
-  font-size: clamp(1rem, 1.39vw, 1.5rem);
+  font-size: clamp(0.875rem, 1.39vw, 1.25rem);
   transition: 0.2s;
 }
 
@@ -561,7 +558,7 @@ body {
 .top_menu_card {
   display: flex;
   align-items: center;
-  gap: 119px;
+  gap: 10.43%;
 }
 
 .top_menu_image {
@@ -581,7 +578,7 @@ body {
 }
 
 .top_menu_title {
-  font-size: 50px;
+  font-size: clamp(2rem, 3.47vw, 3.475rem);
   font-family: "Shippori Mincho B1", serif;
   writing-mode: vertical-rl;
   letter-spacing: 0.3em;
@@ -602,9 +599,12 @@ body {
 .top_menu_title::after {
   content: "";
   display: block;
-  width: 555px;
-  height: 410px;
+  width: 38.54vw;
+  max-width: 555px;
+  height: 28.47vw;
+  max-height: 410px;
   background-image: url(../images/top_about_decoration.png);
+  background-size: cover;
   position: absolute;
   top: -83px;
   right: 0;
@@ -620,9 +620,13 @@ body {
   margin-bottom: 59px;
 }
 
-.top_menu_subimage img {
-  width: 310px;
-  height: 310px;
+.top_menu_sub_image img {
+  width: 100%;
+  max-width: 310px;
+  height: 21.53vw;
+  max-height: 310px;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-top: 57px;
 }
 
@@ -638,6 +642,7 @@ body {
   padding-bottom: 87px;
 }
 
+.top_section_title,
 .section_title {
   text-align: center;
 }
@@ -648,16 +653,18 @@ body {
 
 .top_section_title h2 {
   display: inline-block;
-  font-size: 45px;
+  font-size: clamp(2.25rem, 3.13vw, 3.125rem);
   font-family: "Shippori Mincho B1", serif;
+  letter-spacing: 0.1em;
 }
 
 .section_title_small h2,
 .section_title h2 {
   display: inline-block;
-  font-size: 40px;
+  font-size: clamp(2rem, 2.78vw, 2.8125rem);
 }
 
+.top_section_title h2::after,
 .section_title h2::after {
   content: "";
   display: block;
@@ -675,14 +682,15 @@ body {
 
 .top_product_list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
   margin-top: 32px;
   margin-bottom: 51px;
 }
 
 .top_product_item {
-  width: 31.5789473684%;
+  min-width: 31.5789473684%;
 }
 
 .top_product_item_img {
@@ -809,13 +817,14 @@ body {
 .top_access_body {
   display: flex;
   align-items: flex-end;
-  gap: 53px;
+  gap: 4.47%;
   margin-top: 50px;
 }
 
 .top_access_image {
   width: 49.1228070175%;
-  height: 560px;
+  height: 38.89vw;
+  max-height: 560px;
 }
 
 .top_access_image img {
@@ -854,7 +863,7 @@ body {
 }
 
 .top_access_info_tel {
-  font-size: 24px;
+  font-size: clamp(1.25rem, 1.67vw, 1.5rem);
   font-family: "Crimson Text", sans-serif;
 }
 
@@ -862,6 +871,11 @@ body {
   display: flex;
   align-items: center;
   gap: 30px;
+}
+
+.top_access_map iframe {
+  max-width: 200px;
+  width: 37.9506641366%;
 }
 
 .top_access_map_post_code {
@@ -882,7 +896,7 @@ body {
   border-radius: 4px;
   font-size: 14px;
   letter-spacing: 0.05em;
-  padding: 8px 14px;
+  padding: 8px 4.71%;
   transition: 0.2s;
 }
 
@@ -946,12 +960,6 @@ body {
   gap: 5.08%;
 }
 
-.top_news_title h2 {
-  color: #fff;
-  letter-spacing: 0.03em;
-  writing-mode: vertical-rl;
-}
-
 .top_news_title {
   max-width: 80px;
   height: 360px;
@@ -960,7 +968,9 @@ body {
 }
 
 .top_news_title h2 {
-  font-size: 40px;
+  color: #fff;
+  letter-spacing: 0.03em;
+  writing-mode: vertical-rl;
   font-family: "Shippori Mincho B1", serif;
   letter-spacing: 0.19em;
   line-height: 1;
@@ -999,8 +1009,8 @@ body {
   width: 67.3469387755%;
   background-color: #fff;
   border-right: 1px solid #151515;
-  padding-right: 5.51%;
-  margin-left: 30px;
+  padding-right: 3.82vw;
+  margin-left: 3.06%;
   position: relative;
 }
 
@@ -1077,21 +1087,26 @@ body {
 .top_recruit::after {
   content: "";
   display: block;
+  background-size: cover;
   position: absolute;
   z-index: -1;
 }
 
 .top_recruit::before {
-  width: 334px;
-  height: 334px;
+  width: 23.19vw;
+  height: 23.19vw;
+  max-width: 334px;
+  max-height: 334px;
   background-image: url(../images/top_recruit_decoration1.png);
   top: 0;
   left: 6.94%;
 }
 
 .top_recruit::after {
-  width: 363px;
-  height: 363px;
+  width: 25.21vw;
+  height: 25.21vw;
+  max-width: 363px;
+  max-height: 363px;
   background-image: url(../images/top_recruit_decoration2.png);
   top: 223px;
   right: 11.45%;
@@ -1118,13 +1133,9 @@ body {
   text-align: center;
 }
 
-.top_recruit_box h2 {
-  font-size: 45px;
-}
-
 .top_recruit_box h3 {
   width: 83.4183673469%;
-  font-size: 30px;
+  font-size: clamp(1.5rem, 2.08vw, 2rem);
   margin: 50px auto 30px;
 }
 
@@ -1152,6 +1163,17 @@ body {
 .footer_info_box h3 {
   font-size: 24px;
   margin-bottom: 30px;
+}
+
+.footer_img {
+  width: 11.67vw;
+}
+
+.footer_img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .footer_reserve_box {
@@ -1222,6 +1244,7 @@ body {
 }
 
 .footer_access_list_title {
+  display: inline-block;
   margin-left: 25px;
   margin-bottom: 8px;
   position: relative;
@@ -1287,9 +1310,8 @@ body {
   margin-bottom: 0;
 }
 
-.footer_nav_item a,
-.secondary_link a {
-  font-size: clamp(0.75rem, 1.11vw, 1.25rem);
+.footer_nav_item a {
+  font-size: clamp(0.75rem, 1.11vw, 1.125rem);
   position: relative;
 }
 
@@ -1325,7 +1347,7 @@ body {
 }
 
 .secondary_link a {
-  font-size: 14px;
+  font-size: clamp(0.75rem, 0.972vw, 0.875rem);
   letter-spacing: 0.03em;
 }
 
@@ -1337,9 +1359,10 @@ body {
 
 .footer_btn a {
   display: inline-flex;
+  align-items: center;
   gap: 51px;
   width: 100%;
-  font-size: 20px;
+  font-size: clamp(0.875rem, 1.39vw, 1.25rem);
   font-family: "Crimson Text", sans-serif;
   background-color: #151515;
   border: 1px solid #fff;
@@ -2136,6 +2159,13 @@ body {
   }
 }
 @media (max-width: 750px) {
+  .inner {
+    width: 90%;
+  }
+  .common_lists {
+    padding: 15px;
+  }
+  /*header*/
   .header {
     height: 80px;
   }
@@ -2231,6 +2261,11 @@ body {
     opacity: 1;
     visibility: visible;
   }
+  /*top*/
+  .fv_slide_image:nth-child(1) img {
+    -o-object-position: 28% 50%;
+       object-position: 28% 50%;
+  }
   .reserve_circle {
     width: 100%;
     height: 80px;
@@ -2244,6 +2279,161 @@ body {
   .reserve_circle p::before,
 .reserve_circle p::after {
     content: none;
+  }
+  /*top_about*/
+  .top_menu_card {
+    flex-direction: column;
+  }
+  /*top_company*/
+  .top_company_text {
+    width: 100%;
+  }
+  /*top_access*/
+  .top_access {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .top_access_body {
+    flex-direction: column;
+    align-items: center;
+  }
+  .top_access_image {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .top_access_box {
+    width: 100%;
+  }
+  /*top_company*/
+  .top_company {
+    padding-top: 50px;
+  }
+  /*top_news*/
+  .top_news {
+    padding: 50px;
+  }
+  .top_news_inner {
+    flex-direction: column;
+  }
+  .top_news_title {
+    max-width: none;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .top_news_title h2 {
+    writing-mode: horizontal-tb;
+    padding: 20px 0;
+  }
+  .common_news_posts {
+    gap: 50px;
+  }
+  .common_news_post {
+    flex-direction: column;
+  }
+  .common_news_post_img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .common_news_post_body {
+    width: 100%;
+    border-right: none;
+    margin-left: 0;
+    padding-right: 0;
+  }
+  .common_news_post_body::before,
+.common_news_post_body::after {
+    content: none;
+  }
+  /*recruit*/
+  .top_recruit {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .top_recruit_body {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 25px;
+  }
+  .top_recruit_image {
+    width: 100%;
+  }
+  .top_recruit_box {
+    width: 100%;
+  }
+  .top_recruit_box h3 {
+    margin: 25px auto;
+  }
+  /*footer*/
+  .footer {
+    padding-top: 50px;
+  }
+  .footer_info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer_img {
+    width: 23vw;
+    margin-bottom: 25px;
+  }
+  .footer_info_box {
+    text-align: center;
+  }
+  .footer_info_box h3 {
+    margin-bottom: 20px;
+  }
+  .footer_reserve_box {
+    justify-content: center;
+  }
+  .footer_access {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .footer_access_list:nth-child(1),
+.footer_access_list:nth-child(2),
+.footer_access_list:nth-child(3) {
+    width: 100%;
+  }
+  .footer_access_list_title {
+    display: inline-block;
+  }
+  .footer_links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer_nav {
+    width: 50%;
+  }
+  .footer_nav_lists {
+    height: auto;
+    gap: 15px;
+  }
+  .footer_nav_item {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .footer_border_vertical {
+    display: none;
+  }
+  .footer_btn {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    margin-top: 50px;
+    margin-left: 0;
+  }
+  .footer_btn a {
+    width: 335px;
+  }
+  .footer_cart_box {
+    margin-left: 0;
+  }
+  .footer_copy {
+    margin-top: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
