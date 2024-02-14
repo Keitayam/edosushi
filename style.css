@@ -15,6 +15,10 @@ body {
   padding: 0 10px;
 }
 
+.spbr {
+  display: none;
+}
+
 /*ページ共通*/
 .breadcrumb {
   font-size: 13px;
@@ -439,6 +443,7 @@ body {
 .top_about_text {
   display: flex;
   flex-direction: row-reverse;
+  flex-wrap: wrap;
   padding-right: 21.67vmax;
 }
 
@@ -499,6 +504,7 @@ body {
 }
 
 .top_about_detail {
+  width: 100%;
   margin-top: auto;
   margin-right: 10.21vmax;
 }
@@ -533,6 +539,7 @@ body {
 .top_menu_card {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 10.43%;
 }
 
@@ -552,7 +559,7 @@ body {
   position: relative;
 }
 
-.top_menu_title {
+.top_menu_box h2 {
   font-size: clamp(2rem, 3.47vw, 3.475rem);
   font-family: "Shippori Mincho B1", serif;
   writing-mode: vertical-rl;
@@ -560,12 +567,12 @@ body {
   margin-bottom: 57px;
 }
 
-.top_menu_card:first-child .top_menu_title {
+.top_menu_card:first-child .top_menu_box h2 {
   text-align: end;
   margin-bottom: 68px;
 }
 
-.top_menu_title span {
+.top_menu_box span {
   display: block;
   font-size: 25px;
   letter-spacing: 0.2em;
@@ -585,11 +592,11 @@ body {
   right: 0;
 }
 
-.top_menu_card:last-child .top_menu_title::after {
+.top_menu_card:last-child .top_menu_box h2::after {
   left: 0;
 }
 
-.top_menu_text {
+.top_menu_box p {
   letter-spacing: 0.06em;
   line-height: 2;
   margin-bottom: 59px;
@@ -1403,7 +1410,7 @@ body {
 }
 
 .about_heading_text h3 {
-  font-size: 32px;
+  font-size: clamp(1.5rem, 2.22vw, 2rem);
   letter-spacing: 0.1em;
   line-height: 1.71875;
   margin-bottom: 40px;
@@ -1415,8 +1422,8 @@ body {
 }
 
 .about_heading_img {
-  width: 650px;
-  height: 510px;
+  width: calc(650px / 1440px *100%);
+  height: 35.42vmax;
   position: absolute;
   top: 31px;
   right: 0;
@@ -1521,7 +1528,7 @@ body {
 
 .menu_title {
   display: inline-block;
-  font-size: 56px;
+  font-size: clamp(2.5rem, 3.82vw, 3.475rem);
   border-bottom: 1px solid #434343;
   padding-left: 10.41%;
   margin-top: 120px;
@@ -1572,9 +1579,15 @@ body {
   line-height: 1.55;
 }
 
+.menu_name {
+  padding-right: 10px;
+}
+
 .menu_price {
   color: #A81212;
   font-family: "Noto Serif", serif;
+  padding-left: 15px;
+  white-space: nowrap;
 }
 
 .menu_img_box {
@@ -1611,7 +1624,7 @@ body {
 
 .course_card {
   display: flex;
-  gap: 100px;
+  gap: 6.94%;
   margin-bottom: 90px;
 }
 
@@ -1627,7 +1640,7 @@ body {
 .course_img {
   display: block;
   width: calc(500px / 1140px *100%);
-  height: 390px;
+  height: 27.08vmax;
 }
 
 .course_img img {
@@ -1693,6 +1706,7 @@ body {
 
 .course_item {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   margin-bottom: 19px;
 }
@@ -1735,7 +1749,7 @@ body {
   line-height: 1.94;
   background-color: #FAF8F0;
   border: 1px solid #AF8F26;
-  padding: 22px 174px;
+  padding: 22px 15.26%;
 }
 
 /*company*/
@@ -1755,8 +1769,8 @@ body {
 }
 
 .company_heading_img {
-  width: 680px;
-  height: 480px;
+  width: 47.22vw;
+  height: 33.33vw;
 }
 
 .company_heading_img img {
@@ -1841,6 +1855,14 @@ body {
   padding: 26px 20px 38px 78px;
 }
 
+.company_access_map {
+  text-align: center;
+}
+
+.company_access_map iframe {
+  width: 79.17vw;
+}
+
 .company_history_list {
   display: flex;
   align-items: center;
@@ -1870,7 +1892,7 @@ body {
 
 .company_history_year {
   width: calc(250px / 1140px *100%);
-  font-size: 40px;
+  font-size: clamp(2rem, 2.78vw, 2.8125rem);
   font-family: "Noto Serif", serif;
   line-height: 1.375;
   color: #AF8F26;
@@ -2121,8 +2143,25 @@ body {
   .inner {
     width: 90%;
   }
+  .pcbr {
+    display: none;
+  }
+  .spbr {
+    display: block;
+  }
   .common_lists {
     padding: 15px;
+  }
+  .common_list {
+    display: block;
+  }
+  .common_term {
+    width: 100%;
+    border-right: none;
+  }
+  .common_description {
+    width: 100%;
+    padding: 0 20px 20px;
   }
   /*header*/
   .header {
@@ -2239,8 +2278,79 @@ body {
     content: none;
   }
   /*top_about*/
+  .top_about {
+    padding-top: 50px;
+  }
+  .top_about_text {
+    justify-content: center;
+    text-align: center;
+    padding-right: 0;
+  }
+  .top_about_text h2 {
+    width: 100%;
+    writing-mode: horizontal-tb;
+  }
+  .top_about_text h2:nth-child(2) {
+    text-indent: 0;
+  }
+  .top_about_text h4 {
+    text-align: start;
+    margin: 75px 25px 0;
+  }
+  .top_about_text p {
+    text-align: start;
+    margin-top: 78px;
+  }
+  .top_about_detail {
+    width: 100%;
+    margin-right: 0;
+  }
+  /*top_menu*/
+  .top_menu {
+    padding-bottom: 100px;
+  }
   .top_menu_card {
-    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+  }
+  .top_menu_card:nth-child(2) {
+    margin-top: 75px;
+  }
+  .top_menu_image {
+    width: 100%;
+    order: 2;
+  }
+  .top_menu_box {
+    display: contents;
+    width: 100%;
+  }
+  .top_menu_box h2 {
+    order: 1;
+    width: 100%;
+    letter-spacing: 0.1em;
+    writing-mode: horizontal-tb;
+  }
+  .top_menu_card:first-child .top_menu_box h2,
+  .top_menu_card:nth-child(2) .top_menu_box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .top_menu_box p {
+    order: 3;
+    width: 50%;
+    margin-bottom: 0;
+  }
+  .top_menu_detail {
+    order: 5;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .top_menu_sub_image {
+    order: 4;
+  }
+  .top_menu_sub_image img {
+    margin-top: 0;
   }
   /*top_company*/
   .top_company_text {
@@ -2257,6 +2367,7 @@ body {
   }
   .top_access_image {
     width: 100%;
+    height: 60vw;
     margin-bottom: 25px;
   }
   .top_access_box {
@@ -2268,12 +2379,17 @@ body {
   }
   /*top_news*/
   .top_news {
-    padding: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
   .top_news_inner {
     flex-direction: column;
   }
+  .top_news_title_box {
+    display: contents;
+  }
   .top_news_title {
+    order: 1;
     max-width: none;
     width: 100%;
     height: auto;
@@ -2284,7 +2400,13 @@ body {
     writing-mode: horizontal-tb;
     padding: 20px 0;
   }
+  .top_news_detail {
+    order: 3;
+    text-align: center;
+    margin-top: 25px;
+  }
   .common_news_posts {
+    order: 2;
     gap: 50px;
   }
   .common_news_post {
@@ -2310,18 +2432,33 @@ body {
     padding-bottom: 50px;
   }
   .top_recruit_body {
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 15px;
   }
   .top_recruit_image {
     width: 100%;
   }
+  .top_recruit_image {
+    order: 4;
+  }
   .top_recruit_box {
+    display: contents;
     width: 100%;
   }
+  .top_recruit_title {
+    order: 1;
+  }
   .top_recruit_box h3 {
-    margin: 25px auto;
+    order: 2;
+    margin: 0 auto;
+  }
+  .top_recruit_box p {
+    order: 3;
+    margin-bottom: 0;
+  }
+  .top_recruit_detail {
+    order: 5;
   }
   /*footer*/
   .footer {
@@ -2392,5 +2529,140 @@ body {
   }
   .footer_copy {
     margin-top: 0;
+  }
+  /*about*/
+  .about_fv_bg {
+    background-size: cover;
+    background-position: 10% 50%;
+  }
+  .about_heading {
+    padding-bottom: 100px;
+  }
+  .about_heading_text {
+    width: 100%;
+  }
+  .about_heading_text h3 {
+    text-align: center;
+  }
+  .about_heading_img {
+    position: static;
+    width: 100%;
+  }
+  .about_photo {
+    padding: 0;
+  }
+  .about_photo_img {
+    width: 100%;
+  }
+  .about_info {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .common_list:first-child .about_info_term {
+    padding: 0 20px 10px;
+  }
+  .common_list:first-child .about_info_description {
+    padding: 0 20px 10px;
+  }
+  /*menu*/
+  .lunch_menu_lists,
+  .regular_menu_lists,
+  .drink_menu_lists {
+    padding: 25px 20px;
+  }
+  .menu_name {
+    padding-right: 0;
+  }
+  .menu_img_box {
+    display: block;
+  }
+  .menu_img {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+  }
+  /*course*/
+  .page_course {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+  .course_card,
+  .course_card:nth-child(2n) {
+    flex-direction: column;
+    align-items: center;
+  }
+  .course_img {
+    order: 2;
+    width: 70%;
+    height: auto;
+    margin-bottom: 25px;
+  }
+  .course_text_box {
+    display: contents;
+  }
+  .course_title {
+    order: 1;
+  }
+  .course_text {
+    order: 3;
+  }
+  .course_list {
+    order: 4;
+  }
+  .course_card:first-child .course_text_box .course_text,
+  .course_card:nth-child(2) .course_text_box .course_text,
+  .course_card:nth-child(3) .course_text_box .course_text,
+  .course_card:nth-child(4) .course_text_box .course_text,
+  .course_card:nth-child(5) .course_text_box .course_text {
+    margin-bottom: 25px;
+  }
+  .course_item {
+    justify-content: center;
+    gap: 15px;
+  }
+  /*company*/
+  .page_company {
+    padding-bottom: 100px;
+  }
+  .company_heading {
+    margin-bottom: 75px;
+  }
+  .company_inner {
+    width: 90%;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .company_heading_img {
+    width: 100%;
+    height: 100%;
+    order: 2;
+  }
+  .company_heading_text {
+    display: contents;
+  }
+  .company_heading_text .company_section_title {
+    order: 1;
+  }
+  .company_heading_text p {
+    order: 3;
+    margin-top: 25px;
+  }
+  .company_info,
+  .company_access {
+    margin-bottom: 75px;
+  }
+  .common_list:first-child .company_info_term {
+    padding: 0 20px 20px;
+  }
+  .common_list:nth-child(9) .company_info_term {
+    padding: 20px;
+  }
+  .company_info_description,
+  .common_list:first-child .company_info_description,
+  .common_list:nth-child(3) .company_info_description,
+  .common_list:nth-child(7) .company_info_description,
+  .common_list:nth-child(8) .company_info_description,
+  .common_list:nth-child(9) .company_info_description {
+    padding: 0 20px 20px;
   }
 }
