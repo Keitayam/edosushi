@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Noto+Serif+JP:wght@200;400;500;600;700&family=Shippori+Mincho+B1:wght@500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Noto+Serif+JP:wght@0;400;500;600;700&family=Shippori+Mincho+B1:wght@500;600;700&display=swap"
         rel="stylesheet">
     <link rel="icon" type="image/ico" href="image/favicon.ico">
     <link rel="apple-touch-icon" href="image/apple-touch-icon.png" sizes="180x180">
@@ -45,7 +45,7 @@
 
     <header class="header">
         <div class="top_header_logo">
-            <a href="index.html"><img class="" src="images/logo.png" alt="店舗ロゴ"></a>
+            <a href="index.html"><img class="" src="images/logo.png" alt="店舗ロゴ" loading="lazy" width="168" height="360"></a>
         </div>
         <div class="header_inner">
             <div class="header_content">
@@ -56,8 +56,8 @@
                     </div>
                     <a class="common_cart_box" href="">
                         <figure class="cart_icon">
-                            <img src="images/cart.png" alt="カート">
-                            <img src="images/cart_hover.png" alt="カートホバー">
+                            <img src="images/cart.png" alt="カート" loading="lazy" width="44" height="44">
+                            <img src="images/cart_hover.png" alt="カートホバー" loading="lazy" width="44" height="44">
                         </figure>
                         <p class="cart_text">CART</p>
                     </a>
@@ -73,7 +73,7 @@
                     </ul>
                 </nav>
             </div>
-            
+
         </div>
         <!-- /.header__inner -->
 
@@ -82,58 +82,70 @@
         </div>
 
         <div class="sp_header">
-            <span class="header_bg js-header-close"></span>
-        <div class="sp_header_inner">
-    
-        <nav class="sp_header_nav">
-            <div class="sp_header_close js_header_close">
-                <span class="sp_header_close_line"></span>
-                <span class="sp_header_close_line"></span>
-                <span class="sp_header_close_line"></span>
-                <!-- /.header_close-line -->
-            </div>
-            <!-- /.header__close js-header-close -->
-                <ul class="sp_header_lists">
-                    <li class="header_item"><a href="about.html">江戸鮨處　太いちについて</a></li>
-                    <li class="header_item"><a href="menu.html">お品書き</a></li>
-                    <li class="header_item"><a href="course.html">コース</a></li>
-                    <li class="header_item"><a href="company.html">会社概要</a></li>
-                    <li class="header_item"><a href="recruit.html">採用概要</a></li>
+            <div class="sp_header_inner">
 
-                </ul>
-            <!-- /.header-lists -->
-        </nav>
-        <!-- /.right -->
-        <div class="sp_tel_box">
-            <figure class="sp_tel_icon">
-                <img src="images/sp_tel.png" alt="電話">
-            </figure>
-            <!-- /.sp_tel_icon -->
-        </div>
-        <!-- /.sp_tel_box -->
-        <div class="sp_header_toggle">
-            <span class="sp_header_toggle_line"></span>
-            <span class="sp_header_toggle_line"></span>
-            <span class="sp_header_toggle_line"></span>
-            <!-- /.header__toggle-line -->
-        </div>
-        <!-- /.header__toggle -->
-    </div>
+                <div class="sp_tel_box">
+                    <figure class="sp_tel_icon">
+                        <img src="images/sp_tel.png" alt="電話" loading="lazy" width="50" height="50">
+                    </figure>
+                    <!-- /.sp_tel_icon -->
+                </div>
+                <!-- /.sp_tel_box -->
+
+                <div class="sp_header_toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <!-- /.header__toggle-line -->
+                </div>
+                <!-- /.header__toggle -->
+
+                <div id="sp_header_modal" class="sp_header_modal">
+                    <div class="sp_header_bg js_sp_header_close"></div>
+                        <nav class="sp_header_nav">
+                            <ul class="sp_header_lists">
+                                <li class="sp_header_item"><a href="#message">江戸鮨處　太いちについて</a></li>
+                                <li class="sp_header_item"><a href="#business">お品書き</a></li>
+                                <li class="sp_header_item"><a href="#pickup">コース</a></li>
+                                <li class="sp_header_item"><a href="#color">会社概要</a></li>
+                                <li class="sp_header_item"><a href="#job-info">採用概要</a></li>
+
+                            </ul>
+                        </nav>
+                        <!-- /.sp_header_nav -->
+                        <div class="sp_header_btn_box">
+                            <a class="common_cart_box" href="">
+                                <figure class="cart_icon">
+                                    <img src="images/cart.png" alt="カート" loading="lazy" width="44" height="44">
+                                    <img src="images/cart_hover.png" alt="カートホバー" loading="lazy" width="44" height="44">
+                                </figure>
+                                <p class="cart_text">CART</p>
+                            </a>
+                            <div class="sp_header_btn common_store_btn">
+                                <a href="">ONLINE STORE</a>
+                            </div>
+                        </div>
+                        <!-- /.sp_header_btn_box -->
+                </div>
+                <!-- /.sp_header_modal -->         
+               
+            </div>
+            <!-- /.sp_header_inner -->
         </div>
         <!-- /.sp_header -->
     </header>
     <!-- /.header -->
 
     <section class="top_fv fv">
-            <div class="fv_slide">
-                <figure class="fv_slide_image"><img src="images/top_fv_sushi.jpg" alt="寿司"></figure>
-                <figure class="fv_slide_image"><img src="images/menu_sushi8.jpg" alt="寿司8"></figure>
-                <figure class="fv_slide_image"><img src="images/menu_drink2.jpg" alt="飲み物2"></figure>
-                <figure class="fv_slide_image"><img src="images/message1.jpg" alt="メッセージ1"></figure>
-            </div>  
+        <div class="fv_slide">
+            <figure class="fv_slide_image"><img src="images/top_fv_sushi.jpg" alt="寿司" loading="lazy" width="1440" height="480"></figure>
+            <figure class="fv_slide_image"><img src="images/menu_sushi8.jpg" alt="寿司8" loading="lazy" width="1440" height="480"></figure>
+            <figure class="fv_slide_image"><img src="images/menu_drink2.jpg" alt="飲み物2" loading="lazy" width="1440" height="480"></figure>
+            <figure class="fv_slide_image"><img src="images/message1.jpg" alt="メッセージ1" loading="lazy" width="1440" height="480"></figure>
+        </div>
     </section>
     <!-- /.top_fv -->
-        
+
     <a class="reserve_circle reserve_btn" href="">
         <h4>予約する</h4>
         <p>RESERVATION</p>
@@ -145,7 +157,7 @@
         <div class="inner">
             <div class="top_about_text">
                 <h2>江戸鮨處</h2>
-                <h2>太いちについて</h2> 
+                <h2>太いちについて</h2>
                 <h4>シャリが良くてもダメなんだ、<br>
                     ネタが良くてもダメなんだ、<br>
                     鮨が旨くなくちゃあな…
@@ -158,7 +170,7 @@
                 <div class="top_about_detail detail_btn">
                     <a href="">詳しく見る</a>
                 </div>
-            </div>
+            </div> <!-- /.top_about_text -->
         </div>
 
     </section>
@@ -169,7 +181,7 @@
         <div class="inner">
             <div class="top_menu_card">
                 <figure class="top_menu_image">
-                    <img src="images/menu_sushi3.jpg" alt="コースのお料理">
+                    <img src="images/menu_sushi3.jpg" alt="コースのお料理" loading="lazy" width="700" height="490">
                 </figure>
                 <div class="top_menu_box">
                     <h2>コースの<br class="pcbr">お料理</h2>
@@ -180,13 +192,13 @@
                         <a href="">詳しく見る</a>
                     </div>
                     <figure class="top_menu_sub_image">
-                        <img src="images/top_menu_sub1.jpg" alt="コースのお料理サブ">
+                        <img src="images/top_menu_sub1.jpg" alt="コースのお料理サブ" loading="lazy" width="310" height="310">
                     </figure>
                 </div>
-            </div>
+            </div><!-- /.top_menu_card -->
             <div class="top_menu_card">
                 <figure class="top_menu_image">
-                    <img src="images/top_menu2.jpg" alt="お品書き">
+                    <img src="images/top_menu2.jpg" alt="お品書き" loading="lazy" width="700" height="490">
                 </figure>
                 <div class="top_menu_box">
                     <h2>お品書き<br><span>　（鮨・お飲み物）</span></h2>
@@ -195,10 +207,10 @@
                         <a href="">詳しく見る</a>
                     </div>
                     <figure class="top_menu_sub_image">
-                        <img src="images/menu_drink3.jpg" alt="お品書きサブ">
+                        <img src="images/menu_drink3.jpg" alt="お品書きサブ" loading="lazy" width="310" height="310">
                     </figure>
                 </div>
-            </div>
+            </div><!-- /.top_menu_card -->
         </div>
     </section>
     <!-- /.top_menu -->
@@ -206,11 +218,13 @@
 
     <section class="top_product_lists">
         <div class="top_product_lists_inner inner">
-            <div class="top_product_list_title top_section_title"><h2>販売商品一覧</h2></div>
+            <div class="top_product_list_title top_section_title">
+                <h2>販売商品一覧</h2>
+            </div>
             <div class="top_product_list">
                 <div class="top_product_item item1">
                     <figure class="top_product_item_img">
-                        <img src="images/top_product_rokkomisoduke.png" alt="金と銀の味噌漬ギフト">
+                        <img src="images/top_product_rokkomisoduke.png" alt="金と銀の味噌漬ギフト" loading="lazy"  width="360" height="210">
                     </figure>
                     <div class="top_product_item_body">
                         <h4 class="top_product_item_text">金と銀の味噌漬ギフト<br>（六甲味噌漬2種）</h4>
@@ -225,7 +239,7 @@
                 </div>
                 <div class="top_product_item item2">
                     <figure class="top_product_item_img">
-                        <img src="images/top_product_saikyomiso5.png" alt="西京味噌漬">
+                        <img src="images/top_product_saikyomiso5.png" alt="西京味噌漬" loading="lazy" width="360" height="210">
                     </figure>
                     <div class="top_product_item_body">
                         <h4 class="top_product_item_text">西京味噌漬<br>（5種）</h4>
@@ -240,7 +254,7 @@
                 </div>
                 <div class="top_product_item item3">
                     <figure class="top_product_item_img">
-                        <img src="images/top_product_saikyomiso7.png" alt="西京味噌漬">
+                        <img src="images/top_product_saikyomiso7.png" alt="西京味噌漬" loading="lazy" width="360" height="210">
                     </figure>
                     <div class="top_product_item_body">
                         <h4 class="top_product_item_text">西京味噌漬<br>（7種）</h4>
@@ -264,10 +278,12 @@
 
     <section class="top_access">
         <div class="top_access_inner inner">
-            <div class="top_section_title"><h2>店舗案内</h2></div>
+            <div class="top_section_title">
+                <h2>店舗案内</h2>
+            </div>
             <div class="top_access_body">
-                <figure class="top_access_image">   
-                    <img src="images/entrance.png" alt="入口">
+                <figure class="top_access_image">
+                    <img src="images/entrance.png" alt="入口" loading="lazy" width="560" height="560">
                 </figure>
                 <div class="top_access_box">
                     <div class="top_access_info">
@@ -294,11 +310,14 @@
                     </div>
 
                     <div class="top_access_map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.274734421842!2d136.89635107475112!3d35.17470445763442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600376d40bdd1b89%3A0x659eeca00c9a830a!2z44CSNDYwLTAwMDIg5oSb55-l55yM5ZCN5Y-k5bGL5biC5Lit5Yy65Li444Gu5YaF77yS5LiB55uu77yR77yV4oiS77yR77ySIOS4uOOBruWGheOCquODvOOCr-ODk-ODqyAxZg!5e0!3m2!1sja!2sjp!4v1707640183608!5m2!1sja!2sjp" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.274734421842!2d136.89635107475112!3d35.17470445763442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600376d40bdd1b89%3A0x659eeca00c9a830a!2z44CSNDYwLTAwMDIg5oSb55-l55yM5ZCN5Y-k5bGL5biC5Lit5Yy65Li444Gu5YaF77yS5LiB55uu77yR77yV4oiS77yR77ySIOS4uOOBruWGheOCquODvOOCr-ODk-ODqyAxZg!5e0!3m2!1sja!2sjp!4v1707640183608!5m2!1sja!2sjp"
+                            width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <div class="top_access_map_text">
                             <p class="top_access_map_post_code">〒460-0002</p>
                             <p class="top_access_map_address">愛知県名古屋市中区丸の内2丁目15−12 丸の内オークビル1F</p>
-                            <a href="">拡大地図で見る</a>
+                            <a href="https://maps.app.goo.gl/VAdWA2Lqzwt3Kst48" target="_blank">拡大地図で見る</a>
                         </div>
                     </div>
                 </div>
@@ -309,7 +328,9 @@
 
     <section class="top_company">
         <div class="top_company_inner inner">
-            <div class="top_section_title section_title_small"><h2>会社概要</h2></div>
+            <div class="top_section_title section_title_small">
+                <h2>会社概要</h2>
+            </div>
             <div class="top_company_text">
                 <h3>株式会社ムソーが運営しています。株式会社ムソーが運営しています。</h3>
                 <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。 テキストが入ります。テキストが入ります。</p>
@@ -324,7 +345,9 @@
     <section class="top_news">
         <div class="top_news_inner inner">
             <div class="top_news_title_box">
-                <div class="top_news_title section_title_small"><h2>お知らせ</h2></div>
+                <div class="top_news_title section_title_small">
+                    <h2>お知らせ</h2>
+                </div>
                 <div class="top_news_detail detail_btn">
                     <a href="news.archive.html">一覧を見る</a>
                 </div>
@@ -332,7 +355,7 @@
             <div class="common_news_posts">
                 <a class="common_news_post" href="">
                     <figure class="common_news_post_img">
-                        <img src="images/menu_sushi6.jpg" alt="お知らせ">
+                        <img src="images/menu_sushi6.jpg" alt="お知らせ" loading="lazy" width="220" height="140">
                     </figure>
                     <div class="common_news_post_body">
                         <time class="post_time">2023.12.15</time>
@@ -343,7 +366,7 @@
 
                 <a class="common_news_post" href="">
                     <figure class="common_news_post_img">
-                        <img src="images/menu_drink1.jpg" alt="お知らせ">
+                        <img src="images/menu_drink1.jpg" alt="お知らせ" loading="lazy" width="220" height="140">
                     </figure>
                     <div class="common_news_post_body">
                         <time class="post_time">2023.12.15</time>
@@ -354,7 +377,7 @@
 
                 <a class="common_news_post" href="">
                     <figure class="common_news_post_img">
-                        <img src="images/top_news_img3.jpg" alt="お知らせ">
+                        <img src="images/top_news_img3.jpg" alt="お知らせ" loading="lazy" width="220" height="140">
                     </figure>
                     <div class="common_news_post_body">
                         <time class="post_time">2023.12.15</time>
@@ -373,10 +396,12 @@
         <div class="inner">
             <div class="top_recruit_body">
                 <figure class="top_recruit_image">
-                    <img src="images/top_recruit_img.png" alt="採用情報">
+                    <img src="images/top_recruit_img.png" alt="採用情報" loading="lazy" width="670" height="460">
                 </figure>
                 <div class="top_recruit_box">
-                    <div class="top_recruit_title top_section_title"><h2>採用情報</h2></div>
+                    <div class="top_recruit_title top_section_title">
+                        <h2>採用情報</h2>
+                    </div>
                     <h3>採用に向けての一言を入れてください。</h3>
                     <p>テキストが入ります。テキストが入ります。テキス トが入ります。テキストが入ります。テキストが 入ります。テキストが入ります。</p>
                     <div class="top_recruit_detail detail_btn">
@@ -393,7 +418,7 @@
         <div class="footer_inner inner">
             <div class="footer_info">
                 <figure class="footer_img">
-                    <img src="images/footer_logo.png" alt="フッターロゴ">
+                    <img src="images/footer_logo.png" alt="フッターロゴ" loading="lazy" width="168" height="360">
                 </figure>
                 <div class="footer_info_box">
                     <h3>店舗へのご予約はこちら</h3>
@@ -425,7 +450,8 @@
                         </div>
                         <div class="footer_access_list">
                             <p class="footer_access_list_title">住所</p>
-                            <p class="footer_access_list_text"><span class="footer_access_list_post_code">〒460-000</span><br>
+                            <p class="footer_access_list_text"><span
+                                    class="footer_access_list_post_code">〒460-000</span><br>
                                 愛知県名古屋市中区丸の内2丁目15−12<br>
                                 丸の内オークビル1F
                             </p>
@@ -451,19 +477,19 @@
                 <span class="footer_border_vertical"></span>
 
                 <ul class="secondary_links">
-                    <li class="secondary_link"><a href="">配送・送料について</a></li>
-                    <li class="secondary_link"><a href="">支払い方法について</a></li>
-                    <li class="secondary_link"><a href="">返品について</a></li>
-                    <li class="secondary_link"><a href="">特定商取引法に基づく表記</a></li>
-                    <li class="secondary_link"><a href="">プライバシーポリシー</a></li>
+                    <li class="secondary_link"><a href="guide.html#delivery">配送・送料について</a></li>
+                    <li class="secondary_link"><a href="guide.html#payment">支払い方法について</a></li>
+                    <li class="secondary_link"><a href="guide.html#return">返品について</a></li>
+                    <li class="secondary_link"><a href="guide.html">特定商取引法に基づく表記</a></li>
+                    <li class="secondary_link"><a href="privacy.html">プライバシーポリシー</a></li>
                 </ul>
 
-                <div class="footer_btn">
+                <div class="footer_btn common_store_btn">
                     <a href="">ONLINE STORE</a>
                     <div class="footer_cart_box common_cart_box">
                         <figure class="cart_icon">
-                            <img src="images/cart.png" alt="カート">
-                            <img src="images/cart_hover.png" alt="カートホバー">
+                            <img src="images/cart.png" alt="カート" loading="lazy" width="44" height="44">
+                            <img src="images/cart_hover.png" alt="カートホバー" loading="lazy" width="44" height="44">
                         </figure>
                         <p class="cart_text">CART</p>
                     </div>
